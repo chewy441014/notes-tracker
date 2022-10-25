@@ -27,7 +27,10 @@ notes.delete('/:id', (req, res) => {
 notes.post('/', (req, res) => {
     // save the note and write it to file
     if (req.body) {
-        req.body.id = uuid();
+        let tempID = uuid();
+        if (db.filter((note) => {note.id === tempID}).length === 0) {
+            req.body.id = tempID;
+        }
         db.push(req.body)
         fs.writeFile('./db/db.json', JSON.stringify(db), (err) =>
         err ? console.error(err) : console.info(`\nData written to json file`))
