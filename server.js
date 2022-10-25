@@ -5,7 +5,7 @@ const routes = require('./routes/index');
 
 // initialize the express app and port
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // setup the middleware and route /api calls using the indicated index.js file
 app.use(express.json());
