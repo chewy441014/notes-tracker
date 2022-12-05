@@ -2,7 +2,7 @@
 
 ## Description
 
-View, create and delete notes in this simple web app, hosted on Github and Heroku (as of 10/27/22). 
+View, create and delete notes in this simple web app, hosted on Github and Heroku. 
 
 ## Usage
 
